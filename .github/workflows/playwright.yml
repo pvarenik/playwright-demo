@@ -49,4 +49,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.event.pull_request.head.sha }}
-          target_url: pvarenik.github.io/allure-history/${{ github.run_number }}
+          target_url: pvarenik.github.io/playwright-demo/${{ github.run_number }}
