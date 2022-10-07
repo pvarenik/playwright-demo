@@ -56,39 +56,3 @@ jobs:
         description: 'Passed'
         state: 'success'
         target_url: https://pvarenik.github.io/playwright-demo/${{ github.run_number }}
-
-
-    # - name: ls0
-    #   run: ls -1
-    # - name: Test marketplace action
-    #   uses: simple-elf/allure-report-action@master
-    #   if: always()
-    #   id: allure-report
-    #   with:
-    #     allure_results: allure-results
-    #     gh_pages: gh-pages
-    #     allure_report: allure-report
-    #     allure_history: allure-history
-    # - name: ls1
-    #   run: ls -1 allure-history
-    # - name: Deploy report to Github Pages
-    #   if: always()
-    #   uses: peaceiris/actions-gh-pages@v2
-    #   with:
-    #     emptyCommits: false
-    #     keepFiles: false
-    #   env:
-    #     PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     PUBLISH_BRANCH: gh-pages
-    #     PUBLISH_DIR: allure-history
-    # - name: ls2
-    #   run: ls -1
-    # - name: Post the link to the report
-    #   if: always()
-    #   uses: Sibz/github-status-action@v1
-    #   with: 
-    #     authToken: ${{secrets.GITHUB_TOKEN}}
-    #     context: 'Test run'
-    #     description: 'Passed'
-    #     state: 'success'
-    #     target_url: https://pvarenik.github.io/playwright-demo/${{ github.run_number }}
