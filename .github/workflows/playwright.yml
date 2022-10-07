@@ -25,7 +25,7 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
-    - name: ls
+    - name: ls0
       run: ls -1
     - name: Test marketplace action
       uses: simple-elf/allure-report-action@master
@@ -36,7 +36,7 @@ jobs:
         # gh_pages: gh-pages
         allure_report: allure-report
         allure_history: allure-history
-    - name: ls
+    - name: ls1
       run: ls -1
     - name: Deploy report to Github Pages
       if: always()
@@ -45,7 +45,7 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
-    - name: ls
+    - name: ls2
       run: ls -1
     # - name: Post the link to the report
     #   if: always()
