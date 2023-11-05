@@ -10,6 +10,10 @@ test.describe("Login page tests", () => {
     await loginPage.goto();
   });
 
+  test.afterEach(async ({ }) => {
+    await loginPage.close();
+  });
+
   test('Check login with standard user', async ({ page }) => {
     await loginPage.loginStandardUser();
   });

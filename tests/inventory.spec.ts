@@ -14,24 +14,4 @@ test.describe("Login page tests", () => {
     await loginPage.loginStandardUser();
   });
 
-  test('Check login with locked user', async ({ }) => {
-    await loginPage.loginLockedUser();
-  });
-
-  test('Check login with problem user', async ({ }) => {
-    await loginPage.loginProblemdUser();
-  });
-
-  test('Check login with performance user', async ({ }) => {
-    await loginPage.loginPerformanceUser();
-  });
-
-  test('Check login with error user', async ({ }) => {
-    await loginPage.loginErrordUser();
-  });
-
-  test('Check login with visual user', async ({ }) => {
-    await loginPage.loginVisualUser();
-  });
-
 });
