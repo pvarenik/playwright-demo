@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Oct 14 20:33:17 GMT 2022","Fri Oct 14 20:33:20 GMT 2022","3099","chromium","example.spec.ts","","","","Check pool load",""
