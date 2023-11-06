@@ -1,5 +1,7 @@
 # playwright-demo
-Allure reporter test
+Demo of the UI testing framework
+
+[Documentation](https://github.com/pvarenik/playwright-demo/wiki)
 
 [Report Example](https://pvarenik.github.io/playwright-demo/)
 
