@@ -22,15 +22,15 @@ export class CartPage {
         expect(continueButton.isVisible()).toBeTruthy();
     };
 
-    async getItems() {
+    private async getItems() {
         return this.page.locator("div.cart_item").all();
     };
 
-    async getCheckotButton() {
+    private async getCheckotButton() {
         return this.page.locator("[data-test='checkout']");
     };
 
-    async getContinueButton() {
+    private async getContinueButton() {
         return this.page.locator("[data-test='continue-shopping']");
     };
 

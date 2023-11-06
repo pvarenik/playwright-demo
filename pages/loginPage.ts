@@ -22,19 +22,19 @@ export class LoginPage {
         expect(loginButton.isVisible(), "Login button is not visible").toBeTruthy();        
     }
 
-    async getUsernameInput() {
+    private async getUsernameInput() {
         return this.page.locator("#user-name");
     }
 
-    async getPasswordInput() {
+    private async getPasswordInput() {
         return this.page.locator("#password");
     }
 
-    async getLoginButton() {
+    private async getLoginButton() {
         return this.page.locator("#login-button");
     }
 
-    async getLockingErrorField() {
+    private async getLockingErrorField() {
         return this.page.locator("h3[data-test='error']");
     }
 

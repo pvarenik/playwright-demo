@@ -17,31 +17,31 @@ export class CheckoutPage {
         expect(this.page.url()).toContain(process.env.BASE_URL + "checkout");
     };
 
-    async getFirstnameField() {
+    private async getFirstnameField() {
         return this.page.locator("[data-test='firstName']");
     };
 
-    async getLastnameField() {
+    private async getLastnameField() {
         return this.page.locator("[data-test='lastName']");
     };
 
-    async getPostalField() {
+    private async getPostalField() {
         return this.page.locator("[data-test='postalCode']");
     };
 
-    async getContinueButton() {
+    private async getContinueButton() {
         return this.page.locator("[data-test='continue']");
     };
 
-    async getCancelButton() {
+    private async getCancelButton() {
         return this.page.locator("[data-test='cancel']");
     };
 
-    async getFinishButton() {
+    private async getFinishButton() {
         return this.page.locator("[data-test='finish']");
     };
 
-    async getBackHomeButton() {
+    private async getBackHomeButton() {
         return this.page.locator("[data-test='back-to-products']");
     };
 

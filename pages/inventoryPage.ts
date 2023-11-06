@@ -25,47 +25,47 @@ export class InventoryPage {
         expect(sortContainer.isVisible, "Sort container is not visible").toBeTruthy();
     };
 
-    async getAppLogo() {
+    private async getAppLogo() {
         return this.page.locator("div.app_logo");
     };
 
-    async getBurgerButton() {
+    private async getBurgerButton() {
         return this.page.locator("div.bm-burger-button");
     };
 
-    async getCart() {
+    private async getCart() {
         return this.page.locator("a.shopping_cart_link");
     };
 
-    async getInventoryItems() {
+    private async getInventoryItems() {
         return this.page.locator("div.inventory_item").all();
     };
 
-    async getAddToCartButtons() {
+    private async getAddToCartButtons() {
         return this.page.locator("button[data-test^='add-to-cart']").all();
     };
 
-    async getCartCount() {
+    private async getCartCount() {
         return this.page.locator("span.shopping_cart_badge").textContent();
     };
 
-    async getInventoryLink() {
+    private async getInventoryLink() {
         return this.page.locator("#inventory_sidebar_link");
     };
 
-    async getAboutLink() {
+    private async getAboutLink() {
         return this.page.locator("#about_sidebar_link");
     };
 
-    async getLogoutLink() {
+    private async getLogoutLink() {
         return this.page.locator("#logout_sidebar_link");
     };
 
-    async getResetLink() {
+    private async getResetLink() {
         return this.page.locator("#reset_sidebar_link");
     };
 
-    async getSortContainer() {
+    private async getSortContainer() {
         return this.page.locator("[data-test='product_sort_container']");
     };
 
