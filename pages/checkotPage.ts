@@ -10,12 +10,11 @@ export class CheckoutPage {
         dotenv.config();
     };
 
-    async goto({ onlyUrlCheck = false }: { onlyUrlCheck?: boolean }) {
+    async goto({ onlyCheck: onlyUrlCheck = false }: { onlyCheck?: boolean }) {
         if (process.env.BASE_URL && !onlyUrlCheck) {
             await this.page.goto(process.env.BASE_URL + "checkout-step-one.html");
         }
-        const matchString = "/^" + process.env.BASE_URL + "checkout(?:-step-one|-step-two|-complete).html$/"
-        expect(this.page.url()).toMatch(matchString);
+        expect(this.page.url()).toContain(process.env.BASE_URL + "checkout");
     };
 
     async getFirstnameField() {

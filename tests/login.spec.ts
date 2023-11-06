@@ -1,11 +1,15 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/loginPage';
+import { allure } from 'allure-playwright';
 
 let loginPage: LoginPage;
 
 test.describe("Login page tests", () => {
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page }, testInfo) => {
+    allure.epic("Login page tests");
+    allure.story("Login page tests");
+    allure.feature(testInfo.title);
     loginPage = new LoginPage(page);
     await loginPage.goto();
   });
@@ -15,27 +19,27 @@ test.describe("Login page tests", () => {
   });
 
   test('Check login with standard user', async ({ page }) => {
-    await loginPage.loginStandardUser();
+    await loginPage.login("standard");
   });
 
   test('Check login with locked user', async ({ }) => {
-    await loginPage.loginLockedUser();
+    await loginPage.login("locked_out", true);
   });
 
   test('Check login with problem user', async ({ }) => {
-    await loginPage.loginProblemdUser();
+    await loginPage.login("problem");
   });
 
   test('Check login with performance user', async ({ }) => {
-    await loginPage.loginPerformanceUser();
+    await loginPage.login("performance_glitch");
   });
 
   test('Check login with error user', async ({ }) => {
-    await loginPage.loginErrordUser();
+    await loginPage.login("error");
   });
 
-  test('Check login with visual user', async ({ }) => {
-    await loginPage.loginVisualUser();
+  test('Check login with visual user', async ({ }, testInfo) => {
+    await loginPage.login("visual");
   });
 
 });

@@ -14,6 +14,12 @@ export class CartPage {
             await this.page.goto(process.env.BASE_URL + "cart.html");
         }
         expect(this.page.url()).toEqual(process.env.BASE_URL + "cart.html");
+        const items = await this.getItems();
+        const checkout = await this.getCheckotButton();
+        const continueButton = await this.getContinueButton();
+        expect(items[0].isVisible()).toBeTruthy();
+        expect(checkout.isVisible()).toBeTruthy();
+        expect(continueButton.isVisible()).toBeTruthy();
     };
 
     async getItems() {
