@@ -1,7 +1,7 @@
 # playwright-demo
 Demo of the UI testing framework
 
-[Documentation](https://github.com/pvarenik/playwright-demo/wiki)
+[Documentation](https://github.com/pvarenik/playwright-demo/wiki/Demo-faramework)
 
 [Report Example](https://pvarenik.github.io/playwright-demo/)
 

@@ -66,6 +66,8 @@ export class LoginPage {
         await this.typePassword(process.env.SECRET_SAUCE);
         if (shoulNotLogin) {
             await this.clickLoginButton("");
+            const errorBanner = await this.getLockingErrorField();
+            expect(errorBanner, "There is no login button").not.toBeNull;
         } else {
             await this.clickLoginButton("inventory.html");
         };
