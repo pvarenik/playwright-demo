@@ -57,14 +57,14 @@ export class LoginPage {
         expect(this.page.url()).toEqual(process.env.BASE_URL + path);
     }
 
-    async login(userType: string, shoulNotLogin = false) {
+    async login(userType: string, shouldNotLogin = false) {
         const envVar = process.env[`${userType.toUpperCase()}_USER`];
         if (!envVar || !process.env.SECRET_SAUCE) {
             throw new Error(`${userType.toUpperCase()}_USER is not defined.`);
         }
         await this.typeUsername(envVar);
         await this.typePassword(process.env.SECRET_SAUCE);
-        if (shoulNotLogin) {
+        if (shouldNotLogin) {
             await this.clickLoginButton("");
             const errorBanner = await this.getLockingErrorField();
             expect(errorBanner, "There is no login button").not.toBeNull;
